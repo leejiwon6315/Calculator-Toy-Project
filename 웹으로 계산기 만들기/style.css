@@ -1,0 +1,67 @@
+@font-face {font-family:'NotoSansCJKkr-DemiLight'; src:url(font/NotoSansCJKkr-DemiLight.ttf)}
+@font-face {font-family:'NotoSansCJKkr-DemiLight'; src:url(font/NotoSansCJKkr-DemiLight.otf)}
+@font-face {font-family:'NotoSansCJKkr-DemiLight'; src:url(font/NotoSansCJKkr-DemiLight.woff)}
+@font-face {font-family:'NotoSansCJKkr-DemiLight'; src:url(font/NotoSansCJKkr-DemiLight.eot)}    
+
+html, body{
+    font-family:'NotoSansCJKkr-DemiLight';
+    margin:0;
+    padding:0;
+    border-style:none;
+}
+
+#calculator{
+    text-align: center;
+    width: 45%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: rgb(100, 100, 100);
+}
+
+#calculator span{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+#calculator #input_formula{
+    font-size: 1.2em;
+    text-align: center;
+    width: 99%;
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+}
+
+#calculator #calc_history{
+    font-size: 20px;
+    color: white;
+    padding-top: 10px;
+}
+
+#calculator #calc_button{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#calculator #calc_button button{
+    font-size: 1.1em;
+    width: 100%;
+    height: 8vw;
+    border-style: none;
+    background-color: whitesmoke;
+}
+
+#calculator #calc_button .regExp_button{
+    background-color: lightsteelblue;
+}
+
+#calculator #calc_button #result_button{
+    background-color: cornflowerblue;
+}
+
+#calculator #calc_button #ac{
+    background-color: lightcoral;
+}
