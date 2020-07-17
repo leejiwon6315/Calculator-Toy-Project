@@ -12,8 +12,17 @@ function add(char){
 
 function reset(){
     //  입력칸 초기화 함수
+    
     inputFormula.value = "";
 }
+
+inputFormula.addEventListener("keyup", function(enterKey){
+    //  계산기 버튼이 아닌, 키 입력으로도 계산이 가능하게끔 Enter를 눌렀을때 calculate함수가 실행되게 했음
+    
+    if(enterKey.code === "Enter"){
+        calculate();
+    }
+})
 
 function calculate(){
     //  입력칸의 문자열이 사칙연산 형식에 맞는가를 판별하고 계산하는 함수
