@@ -1,9 +1,10 @@
 ## 🧮 Calculator 🧮
+### Description
 
 javascript를 이용한 계산기를 웹에서 구현해 보았습니다.<br/><br/>
 기본적인 형태는 html의 table 태그를 활용하였습니다.
 
-<img src="웹으로 계산기 만들기/screen.png" width="412px" height="332px" title="calculator_img" alt="calculator_screenshot"></img>
+<img src="personal-project/웹으로 계산기 만들기/screen.png" width="412px" height="332px" title="calculator_img" alt="calculator_screenshot"></img>
 <br/><br/>
 위 계산기의 빈칸에 키보드로 수식을 입력하거나, 버튼을 눌러 수식을 입력할 수 있습니다.<br/><br/>
 수식 입력 후 계산기 내의 " = " 버튼 혹은 키보드의 " Enter " 키를 입력하면 결과 값이 나오게 됩니다.<br/><br/>
@@ -78,5 +79,5 @@ answer 를 1로 나눈 값이 0보다 크다면(소수점이 존재한다면), �
     reset();
 }
 ```
-마지막으로 계산한 결과를 div를 생성하여 calc_history 에
+마지막으로 계산한 결과를 div를 생성하여 calc_history 에 추가하고, reset 함수를 실행시켜 입력창을 초기화합니다.
 
