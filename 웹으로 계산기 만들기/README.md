@@ -1,15 +1,15 @@
 ## 🧮 Calculator 🧮
 ### Description
 
-javascript를 이용한 계산기를 웹에서 구현해 보았습니다.<br/><br/>
+javascript를 이용한 계산기를 웹에서 구현해 보았습니다.<br/>
 기본적인 형태는 html의 table 태그를 활용하였습니다.
 
 <img src="https://user-images.githubusercontent.com/60544994/87878558-f4ea1580-ca1f-11ea-9f98-b02167ff96b2.png" width="412px" height="332px" title="calculator_img" alt="calculator_screenshot"></img>
 <br/><br/>
-위 계산기의 빈칸에 키보드로 수식을 입력하거나, 버튼을 눌러 수식을 입력할 수 있습니다.<br/><br/>
-수식 입력 후 계산기 내의 " = " 버튼 혹은 키보드의 " Enter " 키를 입력하면 결과 값이 나오게 됩니다.<br/><br/>
-계산된 결과 값은 계산기 아래의 공간에 자동으로 div 생성 후 추가되어, 사용자가 계산 히스토리를 볼 수 있습니다.<br/><br/>
-
+위 계산기의 빈칸에 키보드로 수식을 입력하거나, 버튼을 눌러 수식을 입력할 수 있습니다.<br/>
+수식 입력 후 계산기 내의 " = " 버튼 혹은 키보드의 " Enter " 키를 입력하면 결과 값이 나오게 됩니다.<br/>
+계산된 결과 값은 계산기 아래의 공간에 자동으로 div 생성 후 추가되어, 사용자가 계산 히스토리를 볼 수 있습니다.<br/>
+<br/>
 ### 구현한 javascript code
 ```
 let inputFormula = document.getElementById("input_formula");
@@ -43,7 +43,6 @@ inputFormula.addEventListener("keyup", function(enterKey){
 ```
 계산기 " = " 버튼 뿐만 아닌, " Enter " 키 입력으로도 calculate 함수가 실행될 수 있도록 하는 코드입니다.
 <br/><br/>
-<br/>
 아래는 입력칸의 문자열이 사칙연산 형식에 맞는가를 판별하고 계산하는 calculate 함수입니다.
 ```
 function calculate(){
@@ -66,8 +65,9 @@ function calculate(){
         resultText += (answer%1 > 0 ? answer.toFixed(2) : answer.toString());
     }
 ```
-문자열의 형식이 사칙연산에 맞다면, 계산 후 결과 문자열을 설정합니다.<br/><br/>
-answer 를 1로 나눈 값이 0보다 크다면(소수점이 존재한다면), 소수점 2자리까지 표현합니다.<br/><br/>
+문자열의 형식이 사칙연산에 맞다면, 계산 후 결과 문자열을 설정합니다.<br/>
+answer 를 1로 나눈 값이 0보다 크다면(소수점이 존재한다면), 소수점 2자리까지 표현합니다.
+<br/><br/>
 
 ```
     let resultDiv = document.createElement("div");
