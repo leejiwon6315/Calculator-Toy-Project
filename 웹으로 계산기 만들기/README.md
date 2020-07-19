@@ -4,7 +4,7 @@
 javascript를 이용한 계산기를 웹에서 구현해 보았습니다.<br/><br/>
 기본적인 형태는 html의 table 태그를 활용하였습니다.
 
-<img src="personal-project/웹으로 계산기 만들기/screen.png" width="412px" height="332px" title="calculator_img" alt="calculator_screenshot"></img>
+<img src="https://user-images.githubusercontent.com/60544994/87878558-f4ea1580-ca1f-11ea-9f98-b02167ff96b2.png" width="412px" height="332px" title="calculator_img" alt="calculator_screenshot"></img>
 <br/><br/>
 위 계산기의 빈칸에 키보드로 수식을 입력하거나, 버튼을 눌러 수식을 입력할 수 있습니다.<br/><br/>
 수식 입력 후 계산기 내의 " = " 버튼 혹은 키보드의 " Enter " 키를 입력하면 결과 값이 나오게 됩니다.<br/><br/>
