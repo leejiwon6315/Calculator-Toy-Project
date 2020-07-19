@@ -53,31 +53,30 @@ function calculate(){
 " ( \ - ) ? " 첫 숫자가 마이너스가 올수 있기 때문에, ? 를 사용하여 0개 혹은 1개의 부호를 찾아 매칭합니다.<br/>
 " \d + ( . \d + ) ? "  1개 이상의 문자열(숫자) 매칭, 띄어쓰기를 제외한 앞의 0개 혹은 1개의 문자열(숫자) 매칭합니다.<br/>
 " [ + \ - * / ]{1} " " [ ] " 내 문자열 중 하나를 찾습니다. " \ " 는 뒤 따라오는 " - * / " 문자에 대하여 정규식이 아닌 문자 그대로를 의미하며,<br/>
-{1} 이기 때문에 반드시 한번만 사용됩니다.<br/>
+{1} 이기 때문에 반드시 한번만 사용됩니다.<br/><br/>
 ```
     let formulaValid = formulaRegExp.test(fm);
     let resultText = " 식이 이상합니다 ";
-    //  사칙연산에 맞지 않는다면 식이 이상하다는 문구 출력
     
     if(formulaValid){
-        //  문자열의 형식이 사칙연산 이라면 계산 후 결과 문자열 설정
-        
         let answer;
         eval('answer=' + fm);
         resultText = fm + " = ";
         resultText += (answer%1 > 0 ? answer.toFixed(2) : answer.toString());
-        //  anwer 를 1로 나눈 값이 0보다 크다면, 소수점 2자리에서 자름(반올림됨)
     }
-    
-    //  calc_history 상자에 넣을 또다른 div를 생성, 내용 설정 후 삽입
+```
+문자열의 형식이 사칙연산에 맞다면, 계산 후 결과 문자열을 설정합니다.<br/><br/>
+answer 를 1로 나눈 값이 0보다 크다면(소수점이 존재한다면), 소수점 2자리까지 표현합니다.<br/><br/>
+
+```
     let resultDiv = document.createElement("div");
     resultDiv.appendChild(document.createTextNode(resultText));
     
     if(!formulaValid) resultDiv.classList.add("invalid");
     calcHistDiv.insertBefore(resultDiv, calcHistDiv.firstChild);
 
-    //  입력칸 초기화
     reset();
 }
 ```
+마지막으로 계산한 결과를 div를 생성하여 calc_history 에
 
