@@ -45,6 +45,16 @@ inputFormula.addEventListener("keyup", function(enterKey){
 계산기 " = " 버튼 뿐만 아닌, " Enter " 키 입력으로도 calculate 함수가 실행될 수 있도록 하는 코드입니다.
 <br/><br/>
 ```
+function keyBlock(){
+    if(!((event.keyCode<=65)&&(event.keyCode<=90))){
+        event.returnValue = false;
+    }
+}
+```
+계산을 실행할 때 사용할 eval 함수는 javascript 코드를 인식합니다.<br/>
+계산기 입력창에 javascript 코드 입력을 방지하기 위해, 입력창에 영어가 들어오지 못하게 하는 함수입니다.
+<br/><br/>
+```
 function calculate(){
     const fm = inputFormula.value;
     let resultText = " ";       
