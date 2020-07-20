@@ -18,7 +18,7 @@ inputFormula.addEventListener("keyup", function(enterKey){
 
 function calculate(){
     const fm = inputFormula.value;    
-    let resultText = " ";
+    let resultText = "";
     let answer;
     
     eval('answer=' + fm);
