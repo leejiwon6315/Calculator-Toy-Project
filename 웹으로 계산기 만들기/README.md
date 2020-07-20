@@ -12,10 +12,10 @@ javascript를 이용한 계산기를 웹에서 구현해 보았습니다.<br/>
 <br/>
 ### 구현한 javascript code
 ```
-let inputFormula = document.getElementById("input_formula");
+const inputFormula = document.getElementById("input_formula");
 const calcHistDiv = document.getElementById("calc_history");
 ```
-기존에 많이 사용하던 전역변수 var가 아닌 ES6의 let, const 변수를 사용하였습니다.<br/>
+기존에 많이 사용하던 전역변수 var가 아닌 ES6의 const 변수를 사용하였습니다.<br/>
 getElementById 를 통해 html 문서 내 id가 부여되어 있는 요소들을 가져옵니다.
 <br/><br/>
 ```
@@ -25,6 +25,7 @@ function add(char){
 }
 ```
 수식을 입력하는 칸에 버튼의 문자(숫자)를 입력하는 add 함수 입니다.<br/>
+값이 변할 수 있는 변수는 var가 아닌 ES6의 let을 활용하였습니다.<br/>
 add 함수를 구현하여 html 내의 버튼들에 직접 onclick 이벤트를 추가해 주었습니다.
 <br/><br/>
 ```
