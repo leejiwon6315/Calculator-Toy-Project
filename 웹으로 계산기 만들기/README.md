@@ -46,7 +46,7 @@ inputFormula.addEventListener("keyup", function(enterKey){
 <br/><br/>
 ```
 function keyBlock(){
-    if(!((event.keyCode<=65)&&(event.keyCode<=90))){
+    if(!((event.keyCode >= 65)&&(event.keyCode <= 90))){
         event.returnValue = false;
     }
 }
