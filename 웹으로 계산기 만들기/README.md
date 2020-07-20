@@ -46,7 +46,7 @@ inputFormula.addEventListener("keyup", function(enterKey){
 아래는 입력칸의 문자열이 사칙연산 형식에 맞는가를 판별하고 계산하는 calculate 함수입니다.
 ```
 function calculate(){
-    let fm = inputFormula.value;
+    const fm = inputFormula.value;
     const formulaRegExp = /^(\-)?\d+(.\d+)?[+\-*/]{1}\d+(.\d+)?$/;
 ```
 formulaRegExp 는 사칙연산에 필요한 정규식입니다. 값이 바뀌거나 재할당 될 일이 없기 때문에 const 변수를 사용하였습니다. <br/><br/>
@@ -54,7 +54,7 @@ formulaRegExp 는 사칙연산에 필요한 정규식입니다. 값이 바뀌거
 " \d + ( . \d + ) ? " Description : 1개 이상의 문자열(숫자) 매칭, 띄어쓰기를 제외한 앞의 0개 혹은 1개의 문자열(숫자) 매칭합니다.<br/>
 " [ + \ - * / ]{1} " Description : " [ ] " 내 문자열 중 하나를 찾습니다. " \ " 는 뒤 따라오는 " - * / " 문자에 대하여 정규식이 아닌 문자 그대로를 의미하며, {1} 이기 때문에 반드시 한번만 사용됩니다.<br/><br/>
 ```
-    let formulaValid = formulaRegExp.test(fm);
+    const formulaValid = formulaRegExp.test(fm);
     let resultText = " 식이 이상합니다 ";
     
     if(formulaValid){
