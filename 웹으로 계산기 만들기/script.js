@@ -16,6 +16,12 @@ inputFormula.addEventListener("keyup", function(enterKey){
     }
 })
 
+function keyBlock(){
+    if(!((event.keyCode<=65)&&(event.keyCode<=90))){
+        event.returnValue = false;
+    }
+}
+
 function calculate(){
     const fm = inputFormula.value;    
     let resultText = "";
