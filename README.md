@@ -1,5 +1,6 @@
-## 🧮 Calculator 🧮
+# 🧮 Calculator 🧮
 > Description
+<br/>
 
 javascript를 이용한 계산기를 웹에서 구현해 보았습니다.<br/>
 기본적인 형태는 html의 table 태그를 활용하였습니다.
