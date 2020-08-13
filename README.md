@@ -1,4 +1,4 @@
-# 🧮 Calculator var.1 🧮
+# 🧮 Calculator ver.1 🧮
 > Description
 <br/>
 
