@@ -1,67 +1,127 @@
-@font-face {font-family:'NotoSansCJKkr-DemiLight'; src:url(font/NotoSansCJKkr-DemiLight.ttf)}
-@font-face {font-family:'NotoSansCJKkr-DemiLight'; src:url(font/NotoSansCJKkr-DemiLight.otf)}
-@font-face {font-family:'NotoSansCJKkr-DemiLight'; src:url(font/NotoSansCJKkr-DemiLight.woff)}
-@font-face {font-family:'NotoSansCJKkr-DemiLight'; src:url(font/NotoSansCJKkr-DemiLight.eot)}    
+@import "reset.css";
 
-html, body{
-    font-family:'NotoSansCJKkr-DemiLight';
-    margin:0;
-    padding:0;
-    border-style:none;
+body {
+  background-color: #f6f9fc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#calculator{
-    text-align: center;
-    width: 45%;
-    margin: auto;
-    padding: 30px;
-    border-radius: 12px;
-    background-color: rgb(100, 100, 100);
+#calculator {
+  text-align: center;
+  width: 38vw;
+  margin: 0 auto;
+  margin-top: 3vh;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: rgb(50, 53, 61);
 }
 
-#calculator span{
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
+#calculator span {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
 }
 
-#calculator #input_formula{
-    font-size: 1.2em;
-    text-align: center;
-    width: 99%;
-    height: 40px;
-    margin-top: 20px;
-    border: none;
+#calculator #calcHistory {
+  font-size: 20px;
+  color: white;
+  padding-top: 10px;
 }
 
-#calculator #calc_history{
-    font-size: 20px;
-    color: white;
-    padding-top: 10px;
+#calculator #calcButton {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
-#calculator #calc_button{
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
+#calculator #calcButton button {
+  font-size: 27px;
+  font-weight: 200;
+  color: white;
+  width: 96%;
+  height: 7vw;
+  margin-bottom: 5%;
+  border-radius: 15px;
+  border-style: none;
+  background-color: rgb(81, 81, 85);
+  cursor: pointer;
+  box-shadow: 0 0px 5px rgba(36, 36, 44, 0.815);
 }
 
-#calculator #calc_button button{
-    font-size: 1.1em;
-    width: 100%;
-    height: 8vw;
-    border-style: none;
-    background-color: whitesmoke;
+#calculator #calcButton button:hover {
+  transform: translate(0px, -3px);
+  box-shadow: 0 4px 6px rgba(49, 49, 61, 0.699),
+    0 0px 5px rgba(50, 50, 90, 0.09);
 }
 
-#calculator #calc_button .regExp_button{
-    background-color: lightsteelblue;
+#calculator #calcButton button:active {
+  transform: translate(0px, 1px);
+  background-color: rgb(76, 76, 82);
 }
 
-#calculator #calc_button #result_button{
-    background-color: cornflowerblue;
+#calculator #calcButton #acButton {
+  width: 98.5%;
+  margin: 0;
+  background-color: lightcoral;
 }
 
-#calculator #calc_button #ac{
-    background-color: lightcoral;
+#calculator #calcButton #zeroButton {
+  width: 97.5%;
+}
+
+#calculator #calcButton .regExpButton {
+  background-color: rgb(241, 129, 54);
+}
+
+#calculator #calcButton .regExpButton:active {
+  background-color: rgb(212, 110, 42);
+}
+
+#calculator #calcButton #resultButton {
+  background-color: rgb(110, 125, 153);
+}
+
+#calculator #calcButton #resultButton:active {
+  background-color: rgb(86, 100, 126);
+}
+
+#calculator #calcButton #jsPanel {
+  width: 99%;
+  min-height: 45px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 22px 0 20px 0;
+  background-color: rgb(24, 24, 26);
+  border-radius: 15px;
+}
+
+#calculator #calcButton #jsPanel h3 {
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: right;
+  padding-right: 10px;
+}
+
+#calculator .calcHistory {
+  color: white;
+  font-size: 30px;
+  font-weight: 200;
+  text-align: right;
+  padding-top: 10px;
+  margin-right: 11%;
+  display: flex;
+  flex-direction: column;
+}
+
+#calculator #historyTitle {
+  color: rgb(179, 173, 173);
+  font-size: 20px;
+  font-weight: 300;
+  text-align: right;
+  padding-top: 10px;
+  margin-right: 11%;
 }

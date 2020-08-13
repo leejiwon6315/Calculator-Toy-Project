@@ -1,42 +1,88 @@
-const inputFormula = document.getElementById("input_formula");
-const calcHistDiv = document.getElementById("calc_history");
+const calcHistDiv = document.getElementById(`jsCalcHistory`);
+const panelForm = document.getElementById(`jsPanel`);
+const panel = panelForm.querySelector(`h3`);
+const num = document.querySelectorAll(`.jsNumber`);
 
-function add(char){   
-    let display = document.getElementById('input_formula');
-    display.value += char;
+const regExp = document.querySelectorAll(`.regExpButton`);
+const resultBtn = document.getElementById(`resultButton`);
+const clearBtn = document.querySelector(`#acButton`);
+
+let inputFormula = ``;
+let numCheck = true;
+//연속된(잘못된) 계산 부호를 체크해주는 변수. 가장 먼저 입력했던 부호만 계산에 입력하기 위해 생성
+
+function callAdd(event) {
+  const charNum = event.target.innerText;
+  add(charNum);
 }
 
-function reset(){
-    inputFormula.value = "";
+function callFormula(event) {
+  const charExp = event.target.innerText;
+  formula(charExp);
 }
 
-inputFormula.addEventListener("keyup", function(enterKey){
-    if(enterKey.code === "Enter"){
-        calculate();
+function add(char) {
+  numCheck = true;
+
+  if (inputFormula === `` && char !== `.`) {
+    panel.innerText = char;
+    inputFormula += char;
+  } else if (inputFormula === `` && char === `.`) {
+    panel.innerText = 0 + char;
+    inputFormula += 0 + char;
+  } else {
+    panel.innerText += char;
+    inputFormula += char;
+  }
+}
+
+function formula(char) {
+  if (inputFormula === ``) {
+    if (char === "-") {
+      panel.innerText = `-`;
+      inputFormula += char;
     }
-})
-
-function keyBlock(){
-    if(!((event.keyCode >= 65)&&(event.keyCode <= 90))){
-        event.returnValue = false;
+  } else {
+    if (numCheck === false) {
+    } else {
+      numCheck = false;
+      panel.innerText = ``;
+      inputFormula += char;
     }
+  }
 }
 
-function calculate(){
-    const fm = inputFormula.value;    
-    let resultText = "";
-    let answer;
-    
-    eval('answer=' + fm);
-    resultText = fm + " = ";
-    resultText += (answer%1 > 0 ? answer.toFixed(2) : answer.toString());
+function reset() {
+  panel.innerText = `0`;
+  inputFormula = ``;
+  numCheck = true;
+}
 
-    
+function calculate() {
+  if (inputFormula === `` || numCheck === false) {
+  } else {
+    console.log(inputFormula);
+    const result = eval(inputFormula);
+    panel.innerText = result;
+
+    const resultText = inputFormula + ` = ` + result;
+
     const resultDiv = document.createElement("div");
     resultDiv.appendChild(document.createTextNode(resultText));
 
     calcHistDiv.insertBefore(resultDiv, calcHistDiv.firstChild);
 
-
-    reset();
+    inputFormula = ``;
+    numCheck = true;
+  }
 }
+
+for (let i = 0; i < 11; i++) {
+  num[i].addEventListener(`click`, callAdd);
+}
+for (let i = 0; i < 4; i++) {
+  regExp[i].addEventListener(`click`, callFormula);
+}
+
+resultBtn.addEventListener(`click`, calculate);
+clearBtn.addEventListener(`click`, reset);
