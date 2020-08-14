@@ -1,5 +1,5 @@
 # 🧮 Calculator ver.2 🧮
-> Description
+> Vanilla JS 로 제작한 계산기입니다. 
 <br/>
 
 ver.1 의 계산기와 마찬가지로 Vanilla JS로 계산기를 웹에서 구현해 보았습니다.<br/>
@@ -133,7 +133,7 @@ querySelectorAll 로 받아온 숫자와 연산자 부호들에 반복문을 활
 ---
 
 # 🧮 Calculator ver.1 🧮
-> Description
+> Vanilla JS 로 제작한 계산기입니다. 
 <br/>
 
 javascript를 이용한 계산기를 웹에서 구현해 보았습니다.<br/>
