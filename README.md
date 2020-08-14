@@ -1,3 +1,16 @@
+# 🧮 Calculator ver.2 🧮
+> Description
+<br/>
+
+Vanilla JS로 계산기를 웹에서 구현해 보았습니다.<br/>
+기본적인 형태는 html의 table 태그를 활용하였습니다.
+
+<img src="https://user-images.githubusercontent.com/60544994/90222985-218b2480-de48-11ea-97f6-2bbbffa08f18.png" width="470px" height="332px" title="calculator.ver.2_img" alt="calculator.ver.2_screenshot">
+<br/><br/>
+ver.1 
+
+---
+
 # 🧮 Calculator ver.1 🧮
 > Description
 <br/>
@@ -75,4 +88,5 @@ function calculate(){
 입력칸에 입력된 값을 계산하는 calculate 함수입니다.<br/>
 계산 식을 fm에 저장하고 계산 결과를 answer에 저장합니다. answer가 유리수라면 소수점 둘째자리까지만 표현합니다.<br/>
 answer의 값을 div를 생성하여 calc_history에 추가하고, reset 함수를 실행시켜 입력창을 초기화합니다.
+
 
